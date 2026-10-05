@@ -4,16 +4,20 @@ const projectMain = document.querySelector("#project");
 function projectCard(project) {
   return `
     <article class="project-card">
-      <a href="project.html?project=${project.slug}" aria-label="View ${project.title}">
+      <a href="${project.behanceUrl}" target="_blank" rel="noreferrer" aria-label="View the full ${project.title} project on Behance">
         <div class="project-image-wrap">
           <img src="${project.image}" alt="${project.title}" loading="lazy" />
-          <span class="project-view">View project <b aria-hidden="true">↗</b></span>
-        </div>
-        <div class="project-meta">
-          <span>${project.number}</span>
-          <div><h3>${project.title}</h3><p>${project.type}</p></div>
+          <span class="project-view">View full project <b aria-hidden="true">↗</b></span>
         </div>
       </a>
+      <div class="project-meta">
+        <span>${project.number}</span>
+        <div>
+          <h3>${project.title}</h3>
+          <p>${project.type}</p>
+          <a class="behance-link" href="${project.behanceUrl}" target="_blank" rel="noreferrer">View full project on Behance <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
     </article>`;
 }
 
@@ -37,6 +41,7 @@ if (projectMain) {
         <div class="project-title-block">
           <p class="eyebrow">${project.number} — ${project.type}</p>
           <h1>${project.title}</h1>
+          <a class="round-link behance-hero-link" href="${project.behanceUrl}" target="_blank" rel="noreferrer">View full project on Behance <span aria-hidden="true">↗</span></a>
         </div>
         <figure><img src="${project.image}" alt="${project.title}" /></figure>
       </section>

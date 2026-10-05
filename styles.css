@@ -43,16 +43,18 @@ h1 em, h2 em { font-family: inherit; font-style: italic; font-weight: inherit; l
 .project-card { grid-column: span 5; }
 .project-card:nth-child(3n + 2) { grid-column: 7 / span 6; margin-top: 13vw; }
 .project-card:nth-child(3n) { grid-column: 3 / span 7; }
-.project-card a { display: block; }
+.project-card > a { display: block; }
 .project-image-wrap { aspect-ratio: 1.28; background: #dedbd2; overflow: hidden; position: relative; }
 .project-image-wrap img { height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1); width: 100%; }
-.project-card a:hover img { transform: scale(1.045); }
+.project-card > a:hover img { transform: scale(1.045); }
 .project-view { align-items: center; background: var(--paper); border-radius: 99px; bottom: 1rem; display: flex; font-size: .75rem; gap: 1rem; opacity: 0; padding: .55rem .75rem; position: absolute; right: 1rem; transform: translateY(.5rem); transition: .25s ease; }
-.project-card a:hover .project-view, .project-card a:focus .project-view { opacity: 1; transform: translateY(0); }
+.project-card > a:hover .project-view, .project-card > a:focus .project-view { opacity: 1; transform: translateY(0); }
 .project-view b { color: var(--signal); font-size: 1rem; }
 .project-meta { border-top: 1px solid var(--ink); display: grid; font-size: .67rem; gap: 1rem; grid-template-columns: 2.2rem 1fr; margin-top: .8rem; padding-top: .55rem; }
 .project-meta h3 { font-size: 1.1rem; font-weight: 600; letter-spacing: -.03em; line-height: 1.1; margin: 0 0 .25rem; }
 .project-meta p { color: #696764; margin: 0; }
+.behance-link { align-items: center; background: var(--ink); border: 1px solid var(--ink); border-radius: 99px; color: var(--paper); display: inline-flex; font-size: .68rem; font-weight: 700; gap: .6rem; margin-top: .8rem; padding: .55rem .7rem; }
+.behance-link:hover { background: var(--signal); border-color: var(--signal); color: var(--paper); }
 .about-section { background: var(--sky); display: grid; gap: 4rem; grid-template-columns: 1.2fr 1fr; padding: 10vw 7vw; }
 .about-copy { font-size: clamp(1.1rem, 1.85vw, 1.65rem); line-height: 1.26; max-width: 38rem; }
 .about-copy p + p { font-size: 1.08em; font-weight: 650; margin-top: 2rem; }
@@ -66,6 +68,7 @@ h1 em, h2 em { font-family: inherit; font-style: italic; font-weight: inherit; l
 .project-hero { display: grid; grid-template-columns: .85fr 1.15fr; min-height: calc(100vh - 77px); }
 .project-title-block { align-self: end; padding: 7vw; }
 .project-title-block h1 { font-size: clamp(3.2rem, 6.5vw, 7.5rem); font-weight: 650; letter-spacing: -.085em; line-height: .88; margin-bottom: 0; }
+.behance-hero-link { margin-top: 2.5rem; }
 .project-hero figure { background: #dedbd2; margin: 0; overflow: hidden; }
 .project-hero figure img { height: 100%; min-height: 520px; object-fit: cover; width: 100%; }
 .project-pagination { border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr 1fr; }
